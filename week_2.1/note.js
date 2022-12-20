@@ -21,7 +21,7 @@
 // console.log(myArray)
 
 
-// slice(), endsWith()
+// slice(), endsWith(), replace()
 
 
 
