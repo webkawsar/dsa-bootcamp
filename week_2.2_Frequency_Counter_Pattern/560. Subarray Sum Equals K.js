@@ -23,28 +23,34 @@ function subArraySum(nums, k) {
     let count = 0;
     let sum = 0;
     let hashTable = {0: 1};
-
+    
     for (let i = 0; i < nums.length; i++) {
       
         sum += nums[i];
         const wantedValue = sum - k;
 
-        console.log(sum)
+
         console.log(wantedValue);
+        console.log(wantedValue in hashTable);
+        console.log(hashTable[wantedValue])
 
         if(wantedValue in hashTable) {
+            // count++;
             count += hashTable[wantedValue]
         }
 
         hashTable[sum] = (hashTable[sum] || 0) + 1
-        
+
     }
 
     console.log(hashTable);
     return count;
 }
+
+// [1, -1] === 0
+// []
+// console.log(subArraySum([1, -1, 0], 0))
 // console.log(subArraySum([1, 1, 1], 2))
-// console.log(subArraySum([1, 2, 3], 3))
-console.log(subArraySum([1, -1, 0], 0))
+console.log(subArraySum([1, 2, 3], 3))
 
 
