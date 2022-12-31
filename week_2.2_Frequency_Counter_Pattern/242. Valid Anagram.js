@@ -1,7 +1,7 @@
 
 
 
-
+// O(3n) => O(n)
 function isAnagram(s, t) {
 
     if(s.length !== t.length) return false;
