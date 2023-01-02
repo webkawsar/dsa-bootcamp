@@ -1,29 +1,29 @@
 
 
 // time complexity => O(n * m)
-// function isArraySame(arr1, arr2) {
+function isArraySame(arr1, arr2) {
 
-//     if(arr1.length !== arr2.length) return false;
+    if(arr1.length !== arr2.length) return false;
 
-//     for (const elm of arr1) {
+    for (const elm of arr1) {
 
-//         const index = arr2.indexOf(elm);
-//         if(index === -1) return false;
+        const index = arr2.indexOf(elm);
+        if(index === -1) return false;
 
-//         arr2.splice(index, 1)
-//     }
+        arr2.splice(index, 1)
+    }
 
-//     return true;
-// }
+    return true;
+}
 
-// console.log(isArraySame([1, 2, 3, 4, 6], [1, 2, 3, 4, 5]));
+console.log(isArraySame([1, 2, 3, 4, 6], [1, 2, 3, 4, 5]));
 
 
 
 
 
 // time complexity => O(n + n + n) => O(n)
-function isArraySame(arr1, arr2) {
+function isArraySame2(arr1, arr2) {
 
     if(arr1.length !== arr2.length) return false;
 
@@ -44,7 +44,7 @@ function isArraySame(arr1, arr2) {
     return true;
 }
 
-console.log(isArraySame([1, 2, 3, 4, 6], [1, 2, 3, 4, 6]));
+console.log(isArraySame2([1, 2, 3, 4, 6], [1, 2, 3, 4, 6]));
 
 
 
