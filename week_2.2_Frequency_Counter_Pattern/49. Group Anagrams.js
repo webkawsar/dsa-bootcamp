@@ -10,6 +10,8 @@
 // Input: strs = ["a"]
 // Output: [["a"]]
 
+
+// time complexity O(n^2)
 function groupAnagrams(strs) {
 
     const hashTable = {};
