@@ -1,5 +1,5 @@
 // Difficulty level => Medium
-
+// https://leetcode.com/problems/subarray-sum-equals-k/
 
 
 // Input: nums = [1,1,1], k = 2
@@ -16,7 +16,6 @@
 // [1, 2] [2, 3]
 // [1, 2, 3]
 
-// const mainArray = [ [1], [2], [3]];
 
 function subArraySum(nums, k) {
 

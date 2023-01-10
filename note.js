@@ -93,3 +93,8 @@ console.log(name)
 // start => 
 // end=> end not included . Default is last element
 
+
+
+
+// problem buji nai
+// 53, 560, 49
