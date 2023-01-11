@@ -1,3 +1,5 @@
+// Difficulty level => Medium
+// https://leetcode.com/problems/group-anagrams/
 
 
 
@@ -30,9 +32,9 @@ function groupAnagrams(strs) {
     return Object.values(hashTable);
 }
 
-// console.log(groupAnagrams(["eat","tea","tan","ate","nat","bat"]))
+console.log(groupAnagrams(["eat","tea","tan","ate","nat","bat"]))
 // console.log(groupAnagrams([""]))
-console.log(groupAnagrams(["a"]))
+// console.log(groupAnagrams(["a"]))
 
 
 

@@ -30,7 +30,7 @@ function twoSum2(nums, target) {
 
   const hashTable = {};
   for (let i = 0; i < nums.length; i++) {
-    
+
     const wantedValue = target - nums[i];
     if (wantedValue in hashTable) {
       return [hashTable[wantedValue], i];
@@ -40,6 +40,6 @@ function twoSum2(nums, target) {
 
 }
 
-// console.log(twoSum2([5, 25, 20, 8], 13));
+console.log(twoSum2([5, 25, 8, 20], 13));
 // console.log(twoSum2([3, 2, 4], 6))
-console.log(twoSum2([3, 3], 6));
+// console.log(twoSum2([3, 3], 6));
