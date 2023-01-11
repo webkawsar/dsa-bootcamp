@@ -35,6 +35,11 @@ function subArraySum(nums, k) {
         sum += nums[i];
         const wantedValue = sum - k;
 
+
+        console.log(sum);
+        console.log(wantedValue);
+
+
         if(wantedValue in hashTable) {
             count += hashTable[wantedValue]
         }
@@ -43,12 +48,14 @@ function subArraySum(nums, k) {
         
     }
 
+    console.log(hashTable)
+
     return count;
 }
 
 // console.log(subArraySum([1, -1, 0], 0)) // 3
 // console.log(subArraySum([1, 1, 1], 2)) // 2
-// console.log(subArraySum([1, 2, 3], 3)) // 2
+console.log(subArraySum([1, 2, 3], 3)) // 2
 // console.log(subArraySum([3, 3, 3], 3)) // 3
 
 
