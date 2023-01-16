@@ -7,7 +7,6 @@ function indexOf(arr, searchElm) {
     let low = 0;
     let high = arr.length - 1;
     
-
     while (low <= high) {
 
         let mid = Math.floor((low + high) / 2);
@@ -17,11 +16,11 @@ function indexOf(arr, searchElm) {
             return mid;
         }
 
-        if(mid < searchElm) {
+        if(midValue < searchElm) {
             low = mid + 1;
         }
 
-        if(mid > searchElm) {
+        if(midValue > searchElm) {
             high = mid - 1;
         }
 
