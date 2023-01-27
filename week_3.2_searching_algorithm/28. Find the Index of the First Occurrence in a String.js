@@ -28,8 +28,7 @@ function strStr(haystack, needle) {
 
 
 
-
-
+// kmp algorithm
 // aabaaab
 function buildPrefixTable(s) {
     let table = [0];
@@ -51,6 +50,8 @@ function buildPrefixTable(s) {
 
     return table;
 }
+console.log(buildPrefixTable("aabaaab"))
+
 
 function strStr2(haystack, needle) {
     if(needle.length === '') return 0;

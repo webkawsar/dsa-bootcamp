@@ -97,4 +97,4 @@ console.log(name)
 
 
 // problem buji nai
-// 53, 560, 209, 59
+// 53, 560, 209, 59, 28
