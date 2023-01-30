@@ -59,6 +59,7 @@ function generateMatrix(n) {
     }
 
     console.log(results);
+    return results;
 }
 
 console.log(generateMatrix(3))
