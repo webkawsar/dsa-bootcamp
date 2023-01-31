@@ -100,4 +100,4 @@ function createRange3(num, targetNum, rangeArr = []) {
     return createRange3(num + 1, targetNum, rangeArr);
 }
 
-console.log(createRange3(10, 20);
+console.log(createRange3(10, 20));
