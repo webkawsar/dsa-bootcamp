@@ -28,11 +28,6 @@ console.log(flatten([1, 3, 5, [7, 9]]));
 
 
 
-// https://www.youtube.com/watch?v=EmtnQImW-y4
-// https://www.youtube.com/watch?v=ahG_AWKE5bk
-// https://www.youtube.com/watch?v=dTIEkI3MjtI
-// https://www.youtube.com/watch?v=JUY9tDK7qC4
-
 
 
 // helper method recursion
