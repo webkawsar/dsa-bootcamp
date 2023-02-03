@@ -1,0 +1,27 @@
+
+
+// Selection Sort
+// Smallest element will move to the first
+
+// Time Complexity => o(n^2)
+// Space Complexity => o(1)
+function selectionSort(arr) {
+    for (let i = 0; i < arr.length; i++) {
+       let lowest = i;
+       for (let j = i + 1; j < arr.length; j++) {
+            if(arr[j] < arr[lowest]) {
+                lowest = j;
+            }
+       }
+       if(i !== lowest) {
+            let temp = arr[i];
+            arr[i] = arr[lowest];
+            arr[lowest] = temp;
+       }
+    }
+    return arr;
+}
+
+
+console.log(selectionSort([10, 1, -2, 2, 5, 3]));
+// console.log(selectionSort([1, 10, 2, 20, 6, 30, 9]));
