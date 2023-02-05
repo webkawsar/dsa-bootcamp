@@ -9,7 +9,8 @@ i
 
 */
 
-
+// time complexity O(nlogn)
+// space complexity O(n)
 function merge(arr1, arr2) {
 
     let results = [];
@@ -43,12 +44,23 @@ function merge(arr1, arr2) {
 
 
 function mergeSort(arr) {
+    //console.log(arr) // [1, 3, 5, 9, 7] // [1, 3] 
+    // return [1] // [3]
+
     let mid = Math.floor(arr.length / 2);
     if(arr.length <= 1) return arr;
+    // console.log(mid) 2 // 1
 
-    let left = mergeSort(arr.slice(0, mid));
-    let right = mergeSort(arr.slice(mid));
-    return merge(left, right);
+    let left = mergeSort(arr.slice(0, mid)); // [1, 3] // [1]
+    // [1]
+    // console.log(left)
+
+    let right = mergeSort(arr.slice(mid)); // [3]
+    // [3]
+    // console.log(right)
+
+
+    return merge(left, right); // [1, 3]
 }
 
 console.log(mergeSort([1, 3, 5, 9, 7]));
