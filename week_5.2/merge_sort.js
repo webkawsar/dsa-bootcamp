@@ -10,7 +10,7 @@ i
 */
 
 
-function mergeSort(arr1, arr2) {
+function merge(arr1, arr2) {
 
     let results = [];
     let i = 0;
@@ -39,16 +39,17 @@ function mergeSort(arr1, arr2) {
     return results;
 }
 
-console.log(mergeSort([1, 3, 5], [2, 4, 6, 9, 11]))
+// console.log(merge([1, 3, 5], [2, 4, 6, 9, 11]))
 
 
-// And Operator 
-console.log(true && true)
-console.log(false && true)
-console.log(true && false)
-console.log(false && false)
-console.log(true && '')
-console.log(true && ' ')
-console.log(true && 'Hello')
-console.log(false && 'Hello')
+function mergeSort(arr) {
+    let mid = Math.floor(arr.length / 2);
+    if(arr.length <= 1) return arr;
+
+    let left = mergeSort(arr.slice(0, mid));
+    let right = mergeSort(arr.slice(mid));
+    return merge(left, right);
+}
+
+console.log(mergeSort([1, 3, 5, 9, 7]));
 
