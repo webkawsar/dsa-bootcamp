@@ -30,6 +30,8 @@ p
 
 */
 
+// Divide and conquer method follow kore
+
 // time complexity => O(nlogn)
 // space complexity => O(logn)
 // random element e quick sort valo kaj kore, almost sorted array te quick sort valo kaj kore na tokhon time complexity O(n^2) hoye jay
