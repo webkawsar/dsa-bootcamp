@@ -2,7 +2,7 @@
 
 
 
-// time complexity => O(1)
+
 class Node {
 
     constructor(value) {
@@ -23,6 +23,7 @@ class LinkedList {
     }
 
     // adding node at the end of the linked list
+    // time complexity => O(1)
     push(value) {
         const newNode = new Node(value);
         if(!this.head) {
@@ -34,9 +35,30 @@ class LinkedList {
         }
         this.length++;
     }
+
+    // adding node at the beginning
+    // time complexity => O(1)
+    unshift(value) {
+        const newNode = new Node(value);
+        if(!this.head) {
+            this.head = newNode;
+            this.tail = newNode;
+        } else {
+            // const temp = this.head;
+            // this.head = newNode;
+            // this.head.next = temp;
+            newNode.next = this.head;
+            this.head = newNode;
+        }
+        this.length++;
+    }
 }
 
 const linkedList = new LinkedList(10);
 console.log(linkedList.push(11))
+console.log(linkedList.unshift(9))
 console.log(linkedList)
+
+
+
 
