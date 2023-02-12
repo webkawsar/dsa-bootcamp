@@ -144,18 +144,39 @@ class LinkedList {
         this.length++;
         return true;
     }
+
+    // removing item at specific index
+    // time complexity => O(n)
+    remove(index) {
+        if(index < 0 || index >= this.length) return false;
+
+        // removing from the beginning
+        if(index === 0) return this.shift();
+
+        // removing from at the end
+        if(index === this.length - 1) return this.pop();
+
+        // remove from in between
+        let prevRef = this.get(index-1);
+        let temp = prevRef.next;
+        prevRef.next = temp.next;
+        temp.next = null;
+        this.length--;
+        return temp;
+    }
 }
 
 const linkedList = new LinkedList(10);
-console.log(linkedList.push(11))
-console.log(linkedList.unshift(9))
+console.log(linkedList.push(11));
+console.log(linkedList.unshift(9));
 // console.log(linkedList.shift());
 // console.log(linkedList.pop());
-// console.log(linkedList.get(1))
-// console.log(linkedList.set(2, 50))
-console.log(linkedList.insert(1, 50))
+// console.log(linkedList.get(1));
+// console.log(linkedList.set(2, 50));
+console.log(linkedList.insert(1, 50));
+console.log(linkedList.remove(3))
 
-console.log(linkedList)
+console.log(linkedList);
 
 
 
