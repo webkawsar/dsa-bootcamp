@@ -164,6 +164,26 @@ class LinkedList {
         this.length--;
         return temp;
     }
+
+    // reversing the linked list
+    // interview question
+    // time complexity => O(n)
+    reverse() {
+        // swap head to tail
+        let temp = this.head;
+        this.head = this.tail;
+        this.tail = temp;
+
+        // working with pointer
+        let next = temp.next;
+        let prev = null;
+        for (let i = 0; i < this.length; i++) {
+            next = temp.next;
+            temp.next = prev;
+            prev = temp;
+            temp = next;
+        }
+    }
 }
 
 const linkedList = new LinkedList(10);
@@ -173,9 +193,9 @@ console.log(linkedList.unshift(9));
 // console.log(linkedList.pop());
 // console.log(linkedList.get(1));
 // console.log(linkedList.set(2, 50));
-console.log(linkedList.insert(1, 50));
-console.log(linkedList.remove(3))
-
+// console.log(linkedList.insert(1, 50));
+// console.log(linkedList.remove(3))
+console.log(linkedList.reverse())
 console.log(linkedList);
 
 
