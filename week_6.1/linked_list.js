@@ -33,6 +33,7 @@ class LinkedList {
             this.tail = newNode;
         }
         this.length++;
+        return true;
     }
 
     // adding node at the beginning
@@ -50,6 +51,7 @@ class LinkedList {
             this.head = newNode;
         }
         this.length++;
+        return true;
     }
 
     // remove from the beginning
@@ -101,12 +103,46 @@ class LinkedList {
     // find item at specific index
     // time complexity => O(n)
     get(index) {
+        // validating index
         if(index < 0 || index >= this.length) return null;
         let temp = this.head;
         for (let i = 0; i < index; i++) {
             temp = temp.next;
         }
         return temp;
+    }
+
+    // inserting item at specific index
+    // time complexity => O(n)
+    set(index, value) {
+        let temp = this.get(index);
+        if(temp) {
+            temp.value = value;
+            return true;
+        }
+
+        return false;
+    }
+
+    // inserting node at specific index
+    // time complexity => O(n)
+    insert(index, value) {
+        // validate index
+        if(index < 0 || index > this.length) return false;
+
+        // inserting node at the beginning
+        if(index === 0) return this.unshift(value);
+
+        // inserting node at the end
+        if(index === this.length) return this.push(value);
+
+        // inserting in between
+        const newNode = new Node(value);
+        let temp = this.get(index-1);
+        newNode.next = temp.next;
+        temp.next = newNode;
+        this.length++;
+        return true;
     }
 }
 
@@ -115,7 +151,10 @@ console.log(linkedList.push(11))
 console.log(linkedList.unshift(9))
 // console.log(linkedList.shift());
 // console.log(linkedList.pop());
-console.log(linkedList.get(1))
+// console.log(linkedList.get(1))
+// console.log(linkedList.set(2, 50))
+console.log(linkedList.insert(1, 50))
+
 console.log(linkedList)
 
 
