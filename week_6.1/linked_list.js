@@ -97,14 +97,25 @@ class LinkedList {
 
         return temp;
     }
+
+    // find item at specific index
+    // time complexity => O(n)
+    get(index) {
+        if(index < 0 || index >= this.length) return null;
+        let temp = this.head;
+        for (let i = 0; i < index; i++) {
+            temp = temp.next;
+        }
+        return temp;
+    }
 }
 
 const linkedList = new LinkedList(10);
 console.log(linkedList.push(11))
 console.log(linkedList.unshift(9))
-console.log(linkedList.shift());
-console.log(linkedList.pop());
-
+// console.log(linkedList.shift());
+// console.log(linkedList.pop());
+console.log(linkedList.get(1))
 console.log(linkedList)
 
 
