@@ -4,7 +4,6 @@
 
 
 class Node {
-
     constructor(value) {
         this.value = value;
         this.next = null;
@@ -52,11 +51,29 @@ class LinkedList {
         }
         this.length++;
     }
+
+    // remove from the beginning
+    // time complexity O(1)
+    shift() {
+        if(!this.head) return null;
+
+        const temp = this.head;
+        this.head = this.head.next;
+        this.length--;
+        temp.next = null;
+
+        if(this.length === 0) {
+            this.tail = null;
+        }
+        return temp;
+    }
 }
 
 const linkedList = new LinkedList(10);
 console.log(linkedList.push(11))
 console.log(linkedList.unshift(9))
+console.log(linkedList.shift());
+
 console.log(linkedList)
 
 
