@@ -169,13 +169,13 @@ class LinkedList {
     // interview question
     // time complexity => O(n)
     reverse() {
-        // swap head to tail
+        // swap head to tail, tail to head
         let temp = this.head;
         this.head = this.tail;
         this.tail = temp;
 
         // working with pointer
-        let next = temp.next;
+        let next = null;
         let prev = null;
         for (let i = 0; i < this.length; i++) {
             next = temp.next;
@@ -183,12 +183,15 @@ class LinkedList {
             prev = temp;
             temp = next;
         }
+
+        return this;
     }
 }
 
-const linkedList = new LinkedList(10);
+const linkedList = new LinkedList(9);
+console.log(linkedList.push(10));
 console.log(linkedList.push(11));
-console.log(linkedList.unshift(9));
+// console.log(linkedList.unshift(9));
 // console.log(linkedList.shift());
 // console.log(linkedList.pop());
 // console.log(linkedList.get(1));
